@@ -1,0 +1,68 @@
+/* --- Base --- */
+* { box-sizing: border-box; }
+body { margin: 0; font-family: system-ui, Arial, sans-serif; line-height: 1.5; }
+a { color: inherit; text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+.container { max-width: 1000px; margin: 0 auto; padding: 24px; }
+
+/* --- Header/Nav --- */
+.site-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 24px;
+  border-bottom: 1px solid #f7faf9;
+}
+
+.logo { font-weight: 700; }
+
+.nav { display: flex; gap: 16px; }
+.nav a { padding: 6px 10px; border-radius: 8px; }
+.nav a.active { background: #f7faf9; }
+
+/* --- img in Home --- */
+.hero-content {
+  position: relative;
+  z-index: 1;
+  color: #000;
+
+  text-align: left;       
+  margin-left: 0;         
+}
+
+.hero-name {
+  font-family: "Times New Roman", Times, serif;
+  font-style: italic;
+  font-weight: 900;
+  font-size: clamp(4rem, 7vw, 6rem);
+}
+.hero-subtitle {
+  font-family: "Times New Roman", Times, serif;
+  font-weight: 400;
+  color: #000;
+}
+
+/* --- Hero / Home Section --- */
+.hero-section {
+  min-width: 100vw;              /* full screen width */
+  min-height: 80vh; 
+  background-image: url("./imgs/headshot_cropped.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  display: flex;
+}
+
+.hero-section > .container {
+  position: relative; /* keeps text above overlay */
+  z-index: 1;
+}
+
+/* --- Footer --- */
+.site-footer {
+  padding: 24px;
+  border-top: 1px solid #f7faf9;
+  text-align: center;
+}
