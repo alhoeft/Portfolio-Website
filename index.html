@@ -52,16 +52,50 @@
     <div class="container">
       <p>I am Addie Hoeft, a sophomore pursuing a degree at CU Boulder with a computer science major (BS) and buisness minor. I am originally from New Jersey, but am open to work anywhere. This semester, I am tutoring Discrete Structures and Introduction to Computer Science. I also coach young goalkeepers for Colorado Bears Field Hockey. I love to break down concepts and explain things I am passionate about, so these two jobs are great fun for me. Furthermore, they force me to dig deeper into interesting concepts, thus help me to learn too. As a student, I find myself most interested in back-end and database development. Recently, I worked on a full-stack group project in my Software Development class where I developed the database for a workout tracking website. I am pursuing databases further as I take Design and Analysis of Database Systems in the spring. I am also a member of Phi Sigma Rho, a sorority for women in STEM. I have served as New Member Education, Director of Philanthropy, and Seargent of Arms (rule enforcer). I also won my sorority's Philanthropy award for my work raising money for the Leukemia and Lymphoma Society. Staying active is also important to me as I am a member of CU Club Field Hockey. We travel as a team and raise money through ticket scanning for the university. I love working as team, and am especially proud of my leadership abilities.</p>
       <h2>Resume</h2>
+      <!--EDIT TO WORK-->
       <a class="btn btn-primary" href="./resume.pdf" target="_blank" rel="noopener">Open PDF</a>
     </div>
   </section>
+
   <!--Projects-->
   <section id="projects" class="py-5 bg-light">
-    <div class="container">
-      <h2>Projects</h2>
-      <p>Projects content…</p>
+  <div class="container">
+    <!-- Header row (static) -->
+    <div class="d-flex align-items-center justify-content-between mb-4">
+      <h2 class="m-0">Projects</h2>
+
+      <div class="d-flex gap-2">
+        <button id="projPrev" class="btn btn-outline-dark" type="button" aria-label="Previous project">
+          ←
+        </button>
+        <button id="projNext" class="btn btn-outline-dark" type="button" aria-label="Next project">
+          →
+        </button>
+      </div>
     </div>
-  </section>
+
+    <!-- Project card (this is the ONLY thing that animates) -->
+    <div class="row align-items-center g-4 project-slide" id="projectCard">
+      <!-- Left: text -->
+      <div class="col-12 col-lg-6">
+        <h3 id="projTitle" class="fw-bold"></h3>
+        <p id="projDesc" class="lead"></p>
+
+        <ul id="projBullets" class="mb-4"></ul>
+
+        <div class="d-flex gap-2">
+          <a id="projLive" class="btn btn-dark" target="_blank" rel="noopener">Live</a>
+          <a id="projCode" class="btn btn-outline-dark" target="_blank" rel="noopener">Code</a>
+        </div>
+      </div>
+
+      <!-- Right: image -->
+      <div class="col-12 col-lg-6">
+        <img id="projImg" class="img-fluid rounded-4 shadow-sm" alt="Project screenshot" />
+      </div>
+    </div>
+  </div>
+</section>
 
   <!--About Me-->
   <section id="aboutMe" class="py-5">

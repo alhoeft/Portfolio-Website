@@ -60,6 +60,26 @@ a:hover { text-decoration: underline; }
   z-index: 1;
 }
 
+/* --- Projects --- */
+#projects img {
+  width: 100%;
+  max-height: 420px;
+  object-fit: cover;
+}
+.project-slide {
+  transition: transform 260ms ease, opacity 260ms ease;
+}
+
+.project-slide.slide-out-left {
+  transform: translateX(-24px);
+  opacity: 0;
+}
+
+.project-slide.slide-out-right {
+  transform: translateX(24px);
+  opacity: 0;
+}
+
 /* --- Footer --- */
 .site-footer {
   padding: 24px;
