@@ -59,18 +59,28 @@ h2 {
 h3 {
   font-family: "Atkinson Hyperlegible Mono";
   font-size: 24px;   
-  color: #000;
+  color: #06402B;
   font-style: italic;
 }
 /* --- img in Home --- */
 .home-headshot {
   max-width: 180px;
-  border: 2px solid #ddd;
+  border: 2px solid #fff;
 }
 ul,
 ol,
 li {
   font-family: inherit;
+}
+ul.star-list {
+  list-style: none;
+  padding-left: 1.2em;
+}
+
+ul.star-list li::before {
+  content: "★";
+  color: #06402B;     
+  margin-right: 0.6em;
 }
 .btn,
 button {
@@ -81,17 +91,19 @@ button {
 }
 
 .btn:hover,
-button:hover,
 .btn:focus,
-button:focus,
 .btn:active,
-button:active {
+.btn:focus-visible,
+button:hover,
+button:focus,
+button:active,
+button:focus-visible {
   background-color: #052f20;
   border-color: #052f20;
   color: #fff;
   box-shadow: none;
+  outline: none;
 }
-
 
 
 
@@ -101,6 +113,16 @@ button:active {
   aspect-ratio: 4 / 3;
   object-fit: cover;
   border-radius: 0 !important;
+}
+
+#projects a:not(.btn) {
+  color: #06402B;
+  text-decoration: underline;
+}
+
+
+#projects a:not(.btn):hover {
+  color: #052f20;
 }
 
 
