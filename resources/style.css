@@ -12,77 +12,102 @@ a:hover { text-decoration: underline; }
   justify-content: space-between;
   align-items: center;
   padding: 16px 24px;
-  border-bottom: 1px solid #f7faf9;
+  border-bottom: 1px solid #06402B;
 }
 
 .logo { font-weight: 700; }
 
-.nav { display: flex; gap: 16px; }
-.nav a { padding: 6px 10px; border-radius: 8px; }
-.nav a.active { background: #f7faf9; }
-
-/* --- img in Home --- */
-.hero-content {
-  position: relative;
-  z-index: 1;
-  color: #000;
-
-  text-align: left;       
-  margin-left: 0;         
+.navbar {
+  padding-block: 0.25rem;
 }
 
-.hero-name {
-  font-family: "Times New Roman", Times, serif;
+.navbar-nav .nav-link {
+  font-family: "Atkinson Hyperlegible Mono", monospace;
+  font-weight: 500;
+  font-size: 0.8rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  padding: 4px 8px;
+}
+
+.navbar-nav .nav-link.active {
+  background: #06402B;
+  color: #fff;
+}
+
+
+/* --- fonts --- */
+p {
+  font-family: "Atkinson Hyperlegible Mono";
+  font-size: 16px;   
+  line-height: 1.8;
+  letter-spacing: -0.03em;
+  color: #000;
+}
+h1 {
+  font-family: "Atkinson Hyperlegible Mono";
+  font-size: 40px;   
+  color: #06402B;
+  font-weight: 700;    /* bold */
+}
+h2 {
+  font-family: "Atkinson Hyperlegible Mono";
+  font-size: 30px;   
+  color: #000;
+  font-weight: 600;    /* bold */
+}
+h3 {
+  font-family: "Atkinson Hyperlegible Mono";
+  font-size: 24px;   
+  color: #000;
   font-style: italic;
-  font-weight: 900;
-  font-size: clamp(4rem, 7vw, 6rem);
 }
-.hero-subtitle {
-  font-family: "Times New Roman", Times, serif;
-  font-weight: 400;
-  color: #000;
+/* --- img in Home --- */
+.home-headshot {
+  max-width: 180px;
+  border: 2px solid #ddd;
 }
-
-/* --- Hero / Home Section --- */
-.hero-section {
-  min-width: 100vw;              /* full screen width */
-  min-height: 80vh; 
-  background-image: url("./imgs/headshot_cropped.png");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-
-  display: flex;
+ul,
+ol,
+li {
+  font-family: inherit;
+}
+.btn,
+button {
+  background-color: #06402B;
+  border-color: #06402B;
+  color: #fff;
+  font-family: "Atkinson Hyperlegible Mono", monospace;
 }
 
-.hero-section > .container {
-  position: relative; /* keeps text above overlay */
-  z-index: 1;
+.btn:hover,
+button:hover,
+.btn:focus,
+button:focus,
+.btn:active,
+button:active {
+  background-color: #052f20;
+  border-color: #052f20;
+  color: #fff;
+  box-shadow: none;
 }
+
+
+
 
 /* --- Projects --- */
-#projects img {
+.project-thumb {
   width: 100%;
-  max-height: 420px;
+  aspect-ratio: 4 / 3;
   object-fit: cover;
-}
-.project-slide {
-  transition: transform 260ms ease, opacity 260ms ease;
+  border-radius: 0 !important;
 }
 
-.project-slide.slide-out-left {
-  transform: translateX(-24px);
-  opacity: 0;
-}
 
-.project-slide.slide-out-right {
-  transform: translateX(24px);
-  opacity: 0;
-}
 
 /* --- Footer --- */
 .site-footer {
   padding: 24px;
-  border-top: 1px solid #f7faf9;
+  border-top: 1px solid #06402B;
   text-align: center;
 }
