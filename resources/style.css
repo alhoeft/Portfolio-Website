@@ -38,6 +38,16 @@ a:hover { text-decoration: underline; }
   padding-block: 0.25rem;
 }
 
+.navbar-brand {
+  font-family: "Atkinson Hyperlegible Mono", monospace;
+  text-transform: uppercase;
+  color: var(--fg);
+}
+
+.navbar-brand:hover {
+  color: var(--fg);
+}
+
 .navbar-toggler-icon {
   filter: invert(1);
 }
@@ -89,7 +99,9 @@ h3 {
 }
 /* --- img in Home --- */
 .home-headshot {
-  max-width: 180px;
+  width: 180px;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
   border: 2px solid var(--accent);
 }
 ul,
